@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,ul {
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            height: 80px;
+        }
+        ul li {
+            float: left;
+            height: 30px;
+            background-color: gray;
+            width: 32%;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        .a {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .b {
+            width: 33%;
+            background-color: gray;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .c {
+            display: flex;
+            height:50px;
+            width: 400px;
+        }
+        .d {
+            flex: 1;
+            background-color: gray;
+        }
+        .e {
+            position: relative;
+            flex: 1;
+            background-color: green;
+        }
+        p {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .f {
+            width: 100px;
+            height: 50px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+        <div class="b"></div>
+    </div>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- 当设置了align-items:center的时候子元素（项目）不再继承容器的高度 垂直居中 -->
+    <!-- flex布局因子子元素过大影响了原本的flex布局可以让子子元素设置定位脱离文档流解决 -->
+    <div class="c">
+        <div class="d">
+            222222222222222
+        </div>
+        <div class="e">
+            <p>1111111111111111111111111111122222222222222222222222222222222222222</p>
+        </div>
+    </div>
+</body>
+</html>

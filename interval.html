@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+<script>
+    let div = document.querySelector('div');
+    let count = 0;
+    setInterval(function(){ 
+        count+=0.1;
+        if(count>3){
+            count = 0;
+        }
+        div.innerHTML =(count).toFixed(1);
+    },100)
+</script>

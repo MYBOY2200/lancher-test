@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            background-color: #ccc;
+            transition: all 1s;
+            /* transform-origin: right bottom 0; */
+        }
+        .a:hover {
+           transform: translate3d(50px,50px,0)
+        }
+        button {
+           margin-bottom: 30px; 
+        }
+    </style>
+</head>
+<body>
+    <button>操作</button>
+    <div class="a"><div>777777</div></div>
+    111111
+</body>
+</html>
+<script>
+    document.querySelector("button").onclick = function() {
+        //translate3d里的x轴和y轴需要是整数,不然盒子里的文字会变模糊
+        document.querySelector('.a').style.transform="translate3d(10px,10px,0)"
+        // document.querySelector('.a').style.transform="rotate(10deg)"
+        // document.querySelector('.a').style.transform="rotate3d(1,0,1,45deg)"
+        // document.querySelector('.a').style.transform="scale3d(3,3,1)"
+
+        // document.querySelector('.a').style.opacity="0"
+        // document.querySelector('.a').style.width="0"
+        // document.querySelector('.a').style.height='0'
+    }
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input[type=checkbox] {
+            margin-right: 10px;
+            margin-top: 1px;
+            position: relative;
+        }
+
+        input[type=checkbox]:after {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 0;
+            content: " ";
+            background-color: #fff;
+            border: 1px solid gray;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 18px;
+        }
+
+        input[type=checkbox]:checked:after {
+            background-color: #4f9bea;
+            content: "✓";
+            color: #fff;    
+        }
+
+        input[type=checkbox]:disabled:after {
+            background-color: #E9E7E3;
+            content: "✓";
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 自定义复选框用伪元素::after做 -->
+    <div class="check-item">
+        <input type="checkbox" class="check-item-in" id="checkbox3">正常复选框
+        <label for="checkbox3"></label>
+    </div>
+
+    <div class="check-item">
+        <input type="checkbox" class="check-item-in" id="checkbox1" checked="checked">复选框checked
+        <label for="checkbox1"></label>
+    </div>
+
+    <div class="check-item">
+        <input type="checkbox" class="check-item-in" id="checkbox2" disabled="true">复选框disableed
+        <label for="checkbox2"></label>
+    </div>
+
+</body>
+
+</html>

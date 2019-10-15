@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <button>德意龙</button>
+        <button>固定环</button>
+        <button>天道</button>
+        <button>加油</button>
+        <button>气缸</button>
+        <button>前端</button>
+    </div>
+</body>
+</html>
+<script>
+    window.onload = function() {
+        let btns=document.getElementsByTagName("button");
+        for(let i=0;i<btns.length;i++){
+                btns[i].onmousemove=function(){
+                    for(let j=0;j<btns.length;j++){
+                        btns[j].style.backgroundColor = "#fff"
+                    }
+                    this.style.backgroundColor = "red"
+                }
+            }
+    }
+</script>

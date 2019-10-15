@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* 用定位实现input输入框在div里垂直居中 */
+    /* 或者设置div高度和行高 再微调input的偏移 */
+    .a {
+        /* box-sizing:border-box; */
+        width: 200px;
+        border: 1px solid #cccccc;
+        height: 80px;
+        /* line-height: 40px; */
+        position: relative;
+    }
+    .a input {
+        position: absolute;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+    /* 对于border-box的盒子行高需要和content的高度(不包括border和padding)一致才能居中 */
+    .b {
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 200px;
+        width: 200px;
+        height:100px;
+        border: 20px solid #000;
+        line-height: 40px;
+    }
+</style>
+<body>
+    <div class="a"><input type="text"></div>
+    <div class="b">行高</div>
+</body>
+</html>
