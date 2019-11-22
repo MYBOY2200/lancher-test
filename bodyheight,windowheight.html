@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .a{
+        background: #000;
+        height:500px;
+    }
+    .b {
+        background: red;
+        height: 500px;
+    }
+    img {
+        height: 100px;
+        display: block;
+    }
+</style>
+<body>
+    <div><img src="http://kexin.wkc.cn/dist/static/img/shisu.991a19f.jpg" alt=""></div>
+    <div><img src="http://kexin.wkc.cn/dist/static/img/shisu7.d93b62e.jpg" alt=""></div>
+
+    <!-- <div class="a"></div>
+    <div class="b"></div> -->
+
+    <!-- <div><img src="./shisu4.jpg" alt=""></div>
+    <div><img src="./shisu7.jpg" alt=""></div> -->
+</body>
+</html>
+
+<script>
+    
+    function c(){
+        console.log(document.body.offsetHeight)
+        console.log(document.documentElement.offsetHeight)
+        console.log(document.documentElement.clientHeight)
+    }
+    //有图片的时候获取body高度不准确，因为图片加载需要时间(给图片手动设置了高度可以获取到准确高度)
+    setTimeout(c,0)
+    
+</script>

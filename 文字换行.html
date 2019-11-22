@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            width: 150px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            /* 文字会自动换行 英文也会 如果英文长度超过父盒子的宽度 会超出盒子 所有单词都换行需要word-break: break-all;(一般都用这个) */
+            /* 如果只想英文长度超过父盒子的宽度的单词换行需要word-break: break-word;(相当于word-wrap: break-word;) */
+            word-break: break-all;
+            /* 文字不换行 */
+            /* white-space: nowrap; */
+
+            /* 文字只显示两行超出部分...(不兼容ie) */
+            /* -webkit-line-clamp: 2;
+            display:-webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-break:break-all; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="box">
+        Hi&nbsp;&nbsp;,
+        This   is a incomprehensibilities long word.
+        </br>
+        你好&nbsp;&nbsp;，
+        这   是一个不可思议的长单词
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: red;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .a {
+            height: 100px
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        111
+    </div>
+    <button class="b">点击</button>
+</body>
+</html>
+<script>
+    document.querySelector(".b").onclick = function() {
+        document.body.style.background = "blue"
+    }
+</script>

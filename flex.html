@@ -41,27 +41,56 @@
             width: 400px;
         }
         .d {
-            flex: 1;
+            /* flex: 1; */
+            width: 100px;
             background-color: gray;
         }
         .e {
-            position: relative;
+            /* position: relative; */
             flex: 1;
             background-color: green;
         }
         p {
             margin: 0;
             padding: 0;
-            position: absolute;
+            /* position: absolute; */
             width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
+            /* white-space: nowrap; */
+            word-break: break-all;
         }
         .f {
             width: 100px;
             height: 50px;
             background-color: gray;
+        }
+        .g {
+            margin: 60px auto 0;
+            width: 600px;
+            display: flex;
+            border: 1px solid red;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .h {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            background-color: #ccc;
+            margin: 10px 0;
+            overflow: hidden; 
+        }
+        .h:hover .i {
+            top: 0
+        }
+        .i {
+            top: -100%;
+            background-color: blue;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 0.5s;
         }
     </style>
 </head>
@@ -85,13 +114,24 @@
     </ul>
     <!-- 当设置了align-items:center的时候子元素（项目）不再继承容器的高度 垂直居中 -->
     <!-- flex布局因子子元素过大影响了原本的flex布局可以让子子元素设置定位脱离文档流解决 -->
+    <!-- 或者用word-break:break-all设置文字换行 -->
     <div class="c">
         <div class="d">
-            222222222222222
+            <p>222222222222222</p>
         </div>
         <div class="e">
             <p>1111111111111111111111111111122222222222222222222222222222222222222</p>
         </div>
+    </div>
+
+    <!-- 窗帘效果 -->
+    <div class="g">
+        <div class="h">1<div class="i">11</div></div>
+        <div class="h">2<div class="i">22</div></div>
+        <div class="h">3<div class="i">33</div></div>
+        <div class="h">4<div class="i">44</div></div>
+        <div class="h">5<div class="i">55</div></div>
+        <div class="h">6<div class="i">66</div></div>
     </div>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .a {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #cccccc;
+            margin: 50px auto;
+            background-color: blue;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .c {
+            display: none;
+            line-height: 1
+        }
+        .a:hover .b{
+            display: none
+        }
+        .a:hover .c {
+            display: block
+        }
+        .a:hover {
+            background: red
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <span class="b">111</span>
+        <span class="c">返回<br>顶部</span>
+    </div>
+</body>
+</html>
