@@ -21,9 +21,25 @@
             object-fit: none;
             object-fit: scale-down;
         }
+
+
+        /* 让图片或块集元素在div垂直居中用flex或者定位 不能用margin-top: 50%,这个是基于父元素的宽度*/
+        .a {
+            height:500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ccc;
+        }
+       
     </style>
 </head>
 <body>
     <img src="./dapdap.png" alt="">
+
+    <!-- 让图片或块集元素在div垂直居中用flex或者定位 不能用margin-top: 50%,这个是基于父元素的宽度 -->
+    <div class='a'>
+        <img src="./dapdap.png" alt="">
+    </div>
 </body>
 </html>
