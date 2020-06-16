@@ -4,10 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <style>
+  /* nth-child按照个数来算。
+  nth-of-type按照类型来计算，如果是class那么碰到不同类型的，单独一类，符合条件的选中。 */
   .p:last-of-type {
     background: #ff0000;
   }
-  
+  /* p:nth-child(3) {
+    background-color: red;
+  } */
   div.p:nth-last-of-type(2){
     color:blue;
   }
