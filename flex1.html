@@ -1,0 +1,42 @@
+<!-- 没内容时有底部的flex布局 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .d {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .a {
+            height: 100px;
+            background-color: green;
+        }
+        .b {
+            flex: auto;
+            background-color: blue;
+        }
+        .c {
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+</body>
+
+</html>
