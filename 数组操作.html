@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    const a = [
+        {
+            key: '11',
+            title: '在线续方'
+        },
+        {
+            key: '22',
+            title: '排班服务'
+        },
+        {
+            key: '33',
+            title: '药店业务'
+        }
+    ]
+    const b = [
+        '22',
+        '33'
+    ]
+    let temp = []
+    for (var i = 0; i < b.length; i++) {
+        temp = temp.concat(a.filter(item => item.key === b[i]))
+    }
+    console.log(temp)
+    let temp1 = []
+    for (var i = 0; i < temp.length; i++) {
+        temp1.push(temp[i].title)
+    }
+    console.log(temp1)
+    function selectTitle(keyArr, limitArr) {
+        let temp = []
+        for (var i = 0; i < keyArr.length; i++) {
+            temp = temp.concat(limitArr.filter(item => item.key === keyArr[i]))
+        }
+        console.log(temp)
+        let temp1 = []
+        for (var i = 0; i < temp.length; i++) {
+            temp1.push(temp[i].title)
+        }
+        console.log(temp1)
+    }
+    selectTitle(b,a)
+</script>
