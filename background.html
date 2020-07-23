@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .a {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            background: url('./shisu4.jpg') no-repeat center / cover
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            /* object-fit: fill; */
+            /* object-fit: contain; */
+            object-fit: cover;  /* 一般这个好看和背景cover居中的效果一样 */
+            /* object-fit: none; */
+            /* object-fit: scale-down; */
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <img src="./shisu4.jpg" alt="">
+</body>
+</html>
+
+<script>
+    var a = document.querySelector('.a')
+    a.onmouseover = function() {
+        this.style.transition = 'all 1s';
+        //transition对background-position生效,对background-size不生效
+        // this.style.backgroundPosition = '5px 5px'
+        this.style.backgroundSize = '100% 100%'
+    }
+</script>

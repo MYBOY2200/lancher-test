@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body.modal-open {
+            position: fixed;
+            /* width: 100%; */
+        }
+
+        .a {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .b {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 50px;
+            min-height: 50px;
+            background-color: #fff;
+            
+        }
+
+        .c {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .d {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+    <p>daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy
+        daddydaddydaddydaddydaddy daddy daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy
+        daddydaddydaddydaddydaddy daddydaddydaddydaddydaddy daddy</p>
+
+    <!-- 设置body的fixed定位 记录当前位置-->
+    <button onclick="openCover()">遮罩层并且禁止滚动</button>
+
+    <!-- 遮罩层 -->
+    <div class="a">
+        <div class="b">
+            <!-- 恢复位置 -->
+            <button onclick="closeCover()">关闭遮罩层恢复位置</button>
+            <div class="d">222</div>
+            <div class="c">111</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    //获取当前滚动值
+    function getScrollTop() {
+        var scrollTop = 0;
+        if(document.documentElement && document.documentElement.scrollTop) {
+            scrollTop = document.documentElement.scrollTop;
+        } else if(document.body) {
+            scrollTop = document.body.scrollTop;
+        }
+        // console.log(scrollTop)
+        return scrollTop;
+    }
+
+    var scrollTop//设置成全局
+
+    //打开遮罩层
+    function openCover() {
+        scrollTop = getScrollTop();
+        document.body.className="modal-open";
+        document.body.style.top = -scrollTop + 'px';
+        document.querySelector('.a').style.display = 'block';
+    }
+    //关闭遮罩层
+    function closeCover() {
+        document.body.className=" ";
+        document.querySelector('.a').style.display = 'none';
+        document.body.scrollTop = scrollTop;
+        document.documentElement.scrollTop = scrollTop;
+    }
+</script>

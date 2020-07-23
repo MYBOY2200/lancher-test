@@ -15,7 +15,7 @@
             height: 100px;
             background-color: #ccc;
             margin: 100px auto 20px;
-            overflow: auto;
+            overflow: hidden;
         }
         .b {
             width: 100px;
@@ -52,3 +52,9 @@
     </div>
 </body>
 </html>
+
+<script>
+    document.querySelector('.a').onmouseover = function () {
+        this.style.height = 'auto'
+    }
+</script>
