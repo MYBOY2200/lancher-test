@@ -12,8 +12,10 @@
         }
 
         body.modal-open {
-            position: fixed;
-            /* width: 100%; */
+            /* position: fixed;
+            width: 100%; */
+            /* 设置成超出隐藏就完事了嗷 */
+            overflow: hidden;
         }
 
         .a {
@@ -116,31 +118,32 @@
 </html>
 <script>
     //获取当前滚动值
-    function getScrollTop() {
-        var scrollTop = 0;
-        if(document.documentElement && document.documentElement.scrollTop) {
-            scrollTop = document.documentElement.scrollTop;
-        } else if(document.body) {
-            scrollTop = document.body.scrollTop;
-        }
-        // console.log(scrollTop)
-        return scrollTop;
-    }
+    // function getScrollTop() {
+    //     var scrollTop = 0;
+    //     // if(document.documentElement && document.documentElement.scrollTop) {
+    //     //     scrollTop = document.documentElement.scrollTop;
+    //     // } else if(document.body) {
+    //     //     scrollTop = document.body.scrollTop;
+    //     // }
+    //     scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    //     // console.log(scrollTop)
+    //     return scrollTop;
+    // }
 
-    var scrollTop//设置成全局
+    // var scrollTop//设置成全局
 
     //打开遮罩层
     function openCover() {
-        scrollTop = getScrollTop();
+        // scrollTop = getScrollTop();
         document.body.className="modal-open";
-        document.body.style.top = -scrollTop + 'px';
+        // document.body.style.top = -scrollTop + 'px';
         document.querySelector('.a').style.display = 'block';
     }
     //关闭遮罩层
     function closeCover() {
         document.body.className=" ";
         document.querySelector('.a').style.display = 'none';
-        document.body.scrollTop = scrollTop;
-        document.documentElement.scrollTop = scrollTop;
+        // document.body.scrollTop = scrollTop;
+        // document.documentElement.scrollTop = scrollTop;
     }
 </script>
