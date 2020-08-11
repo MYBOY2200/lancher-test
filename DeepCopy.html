@@ -13,12 +13,21 @@
 
 </html>
 <script>
+    //浅拷贝对象(同一个原型)
+    function copyObject(orig) {
+        return Object.create(
+            Object.getPrototypeOf(orig),
+            Object.getOwnPropertyDescriptors(orig)
+        );
+    }
+
+    //递归深拷贝对象(不是同一个原型) (Object.assign拷贝也不是同一个原型) (JSON对象转换是深拷贝)
     function clone(Obj) {
         // 首先，然后确定递归的回调，最终到达对象或者数组的末端，达到深拷贝的要求。
         var newObj;
         if (Obj instanceof Array) { //确定类型
             newObj = [];  // 创建一个空的数组
-            Obj.forEach((element,key)=>{
+            Obj.forEach((element, key) => {
                 newObj[key] = clone(Obj[key]) //递归回调
             })
             return newObj;
@@ -40,10 +49,10 @@
     }
 
     var obj = {
-        a: function() {},
+        a: function () { },
         b: 1,
-        c: [1,2,3],
-        d: {x:1,y:2}
+        c: [1, 2, 3],
+        d: { x: 1, y: 2 }
     }
     var objClone = clone(obj)
     console.log(objClone.d.x) //1

@@ -15,16 +15,28 @@
             height: 100px;
             background-color: #ccc;
             margin: 100px auto 20px;
-            overflow: hidden;
+            /* overflow: hidden; */
+            overflow: auto;
         }
         .b {
             width: 100px;
             margin: 0 auto;
             overflow: auto;
         }
+
+        .c {
+            width: 200px;
+            background-color: chocolate;
+            margin: 50px auto;
+            overflow: auto;
+        }
+        .d {
+            min-width: 300px;
+        }
     </style>
 </head>
 <body>
+    <!-- 垂直超出 -->
     <div class="a">
         <p>1</p>
         <p>2</p>
@@ -47,14 +59,30 @@
         <p>19</p>
         <p>20</p>
     </div>
+
+    <!-- 长单词横向超出 -->
     <div class="b">
        this is whosyourdaddy
+    </div>
+
+    <!-- 盒子横向超出 -->
+    <div class="c">
+        <div class="d">
+            <button>按钮</button>
+            <button>按钮</button>
+            <button>按钮</button>
+            <button>按钮</button>
+            <button>按钮</button>
+            <button>按钮</button>
+            <button>按钮</button>
+            <button>按钮</button>
+        </div>
     </div>
 </body>
 </html>
 
 <script>
-    document.querySelector('.a').onmouseover = function () {
-        this.style.height = 'auto'
-    }
+    // document.querySelector('.a').onmouseover = function () {
+    //     this.style.height = 'auto'
+    // }
 </script>

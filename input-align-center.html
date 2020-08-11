@@ -7,8 +7,9 @@
     <title>Document</title>
 </head>
 <style>
-    /* 用定位实现input输入框在div里垂直居中 */
-    /* 或者设置div高度和行高 再微调input的偏移 */
+    /* 用定位实现input输入框在div里垂直居中(推荐) */
+    /* 用flex布局垂直居中 */
+    /* 或者设置div高度和行高 再微调input的偏移(不推荐) */
     .a {
         /* box-sizing:border-box; */
         width: 200px;
@@ -16,6 +17,8 @@
         height: 80px;
         /* line-height: 80px; */
         position: relative;
+        /* display: flex;
+        align-items: center; */
     }
     .a input {
         position: absolute;
