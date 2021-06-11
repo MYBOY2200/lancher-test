@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
         }
+        /* (可用伪元素、CSS3的缩放、媒体查询做到自适应真正的1px) */
         /* devicePixelRatio(即DPR,物理像素和逻辑像素的比)为2时*/ 
         .scale-1px-bottom {
             position: relative;
@@ -26,6 +27,25 @@
             height: 1px;
             -webkit-transform: scaleY(0.5);
             transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+        .scale-1px-left {
+            position: relative;
+            border: none;
+        }
+
+        .scale-1px-left:after {
+            content: '';
+            position: absolute;
+            background: #000;
+            width: 1px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            -webkit-transform: scaleX(0.5);
+            transform: scaleX(0.5);
             -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
         }
@@ -91,13 +111,18 @@
             -webkit-transform-origin: left top;
             transform-origin: left top;
         }
+        div {
+            width:80%;
+            margin: 10px auto;
+        }
     </style>
 </head>
 
 <body>
-    <div style="border-bottom:1px solid #000;margin-top:20px;">1px原始</div>
-    <div class="scale-1px-bottom" style="margin-top:20px;">1px适配底部DPR=2</div>
-    <div class="scale-1px-all" style="margin-top: 20px;">1px适配四边DPR=2</div>
+    <div style="border-bottom:1px solid #000;">1px原始</div>
+    <div class="scale-1px-bottom" >1px适配底部DPR=2</div>
+    <div class="scale-1px-left">1px适配左边DPR=2</div>
+    <div class="scale-1px-all">1px适配四边DPR=2</div>
 
 </body>
 
