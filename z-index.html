@@ -21,7 +21,7 @@
             top: 20px;
             left: 20px;
             /* z-index: -1; */
-            z-index: 1000;
+            /* z-index: 1000; */
         }
         .c {
             width: 50px;
@@ -30,8 +30,9 @@
             position: absolute;
             top:0;
             left:0;
-            /* 在子元素里设置z-index无用 */
-            /* z-index: 10000; */
+            /* 若父元素脱离了文档流，且父元素的层级已经低了,在子元素里设置z-index跟别的脱离文档流的盒子对比无用 */
+            /* 若父元素没脱离文档流，在子元素里设置z-index跟别的脱离文档流的盒子对比有用 */
+            z-index: 10000;
         }
     </style>
 </head>
