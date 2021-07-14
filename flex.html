@@ -144,7 +144,8 @@
     </ul>
     <!-- 当设置了align-items:center的时候子元素（项目）不再继承容器的高度 垂直居中 -->
     <!-- flex布局因子子元素过大影响了原本的flex布局（或者文字不换行的时候）可以让子子元素设置定位脱离文档流解决 （建议也设置break-all）-->
-    <!-- 或者用word-break:break-all设置文字换行 -->
+    <!-- 或者用word-break:break-all设置文字换行（推荐） -->
+    <!-- 或者子元素都设置百分比宽度width(flex-basis会被挤乱) -->
     <div class="c">
         <div class="d">
             <p>2222222 222 22222</p>
