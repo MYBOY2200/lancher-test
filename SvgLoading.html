@@ -18,6 +18,10 @@
             stroke: #ffcd32;
         }
 
+        .loading-container {
+            /* 设置字体为零可以让容器的高度为svg实际的高度，不然会有偏差 */
+            font-size: 0;
+        }
         .test1 {
             animation: move 1.5s linear infinite;
         }
@@ -75,8 +79,10 @@
     </svg>
 
     <!-- 调整loading大小可以改变,其中svg大小和loading颜色可做成参数 -->
-    <svg width="30" height="30" viewBox="25 25 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" class="test1">
-        <circle class="progress-loading" r="20" cx="50" cy="50" fill="transparent"/>
-    </svg>
+    <div class="loading-container">
+        <svg width="30" height="30" viewBox="25 25 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" class="test1">
+            <circle class="progress-loading" r="20" cx="50" cy="50" fill="transparent"/>
+        </svg>
+    </div>
 </body>
 </html>
