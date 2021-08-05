@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body {
+            /* 之前这里有Bug，解决了，现在无法重现了 */
+            /* height: 100%; */
+        }
+        body {
+            margin: 0;
+        }
+        #app {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .header {
+            height:50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: green;
+        }
+        .content {
+            background-color: pink;
+        }
+        .footer {
+            height: 50px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 之前有Bug，解决了，现在无法重现了 -->
+    <div id="app">
+        <div class="header"></div>
+        <div class="content">
+            <div style="height:300px;background-color: yellow;">123</div>
+            <div style="height:300px;background-color: yellow;">123</div>
+            <div style="height:300px;background-color: yellow;">123</div>
+            <div style="height:300px;background-color: yellow;">123</div>
+            <div style="height:300px;background-color: #ccc;;">123</div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

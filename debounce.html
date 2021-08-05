@@ -19,12 +19,13 @@
         var timer = null // 声明计时器
         return function () {
             var context = this;
-            // console.log(context)
+            console.log(context) //dom元素
             console.log(timer)
             var args = arguments;
+            // console.log(args) //arguments对象
             clearTimeout(timer);
             timer = setTimeout(function () {
-                fn.apply(context, args);
+                fn.apply(context, [...args]);
             }, delay);
         };
     }
