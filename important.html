@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 都是!important的时候谁权重高谁优先,若权重一样，以后定义的样式为准 */
+        div h1 {
+            color: red!important;
+        }
         h1 {
             /* color: red!important; */
-            color: green;
+            color: green!important;
         }
+        
     </style>
 </head>
 <body>
-    <h1>wddddafdf</h1>
+    <div>
+        <h1>wddddafdf</h1>
+    </div>
 </body>
 </html>
 <script>
-    document.querySelector('h1').style.setProperty('color','red','important')
+    // document.querySelector('h1').style.setProperty('color','red','important')
     
 </script>
