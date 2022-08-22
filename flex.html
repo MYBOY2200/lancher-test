@@ -43,11 +43,13 @@
         .d {
             /* flex: 1; */
             width: 100px;
+            /* width:25%; */
             background-color: gray;
         }
         .e {
             /* position: relative; */
             flex: 1;
+            /* width: 75%; */
             background-color: green;
         }
         p {
@@ -111,16 +113,21 @@
             margin-top: 100px;
         }
         .o {
-            width: 200px;
+            /* width: 200px; */
+            flex: 1;
             height: 200px;
-            min-width:200px;
+            /* 遇到分辨率变化被挤压过度项目的百分比宽度子元素的情况设置项目的最小宽度(所有项目都要设置) */
+            /* min-width:200px; */
             background-color: chocolate;
         }
         .p {
-            flex: auto;
+            /* flex: auto; */
+            flex: 2;
             background-color: green;
-            min-width: 300px;
+            /* min-width: 300px; */
             /* max-width: 600px; */
+            /* 若项目设置了flex布局，并且设置了最小宽度，当被挤压时，有固定宽度的子元素会被强行缩小,如果要设置,父元素最小宽度要比子元素大 */
+            /* display: flex; */
         }
     </style>
 </head>
@@ -183,10 +190,15 @@
         </div>
     </div>
 
-    <!-- flex中设置了最小宽度或最大宽度 若防止屏幕缩太小的时候子盒子缩太小 项目“都要”设置最小宽度-->
+    <!-- flex中设置最小宽度或最大宽度 若防止屏幕缩太小的时候百分比宽度的子盒子缩太小 项目“都要”设置最小宽度-->
     <div class="n">
-        <div class="o"></div>
-        <div class="p"></div>
+        <div class="o">
+            <!-- flex布局项目的子盒子设置了宽度能撑开父盒子，相当于父盒子设置了最小宽度 -->
+            <div style="width:300px;height:20px;background:#ccc;margin-top:40px;"></div>
+        </div>
+        <div class="p">
+            <div style="width:500px;height:20px;background:red;"></div>
+        </div>
     </div>
 </body>
 </html>
